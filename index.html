@@ -1,1 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Perspective Shift</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f3ee;
+            color: #171717;
+            line-height: 1.6;
+        }
+
+        header {
+            border-bottom: 1px solid #171717;
+            padding: 24px 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        nav a {
+            color: #171717;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            min-height: 70vh;
+            padding: 100px 6%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 1100px;
+        }
+
+        .hero small {
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(60px, 10vw, 140px);
+            line-height: 0.9;
+            letter-spacing: -7px;
+            max-width: 1000px;
+        }
+
+        .hero p {
+            margin-top: 35px;
+            font-size: 21px;
+            max-width: 600px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 30px;
+            background: #171717;
+            color: white;
+            padding: 14px 25px;
+            text-decoration: none;
+            width: fit-content;
+            font-weight: bold;
+        }
+
+        .articles {
+            background: #171717;
+            color: white;
+            padding: 80px 6%;
+        }
+
+        .articles h2 {
+            font-size: 45px;
+            margin-bottom: 45px;
+        }
+
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .article {
+            border-top: 1px solid #777;
+            padding-top: 20px;
+        }
+
+        .article span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #aaa;
+        }
+
+        .article h3 {
+            font-size: 27px;
+            line-height: 1.1;
+            margin: 15px 0;
+        }
+
+        .article p {
+            color: #ccc;
+        }
+
+        .about {
+            padding: 90px 6%;
+            max-width: 1000px;
+        }
+
+        .about h2 {
+            font-size: 50px;
+            margin-bottom: 25px;
+        }
+
+        .about p {
+            font-size: 22px;
+            max-width: 750px;
+        }
+
+        footer {
+            border-top: 1px solid #171717;
+            padding: 30px 6%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        @media (max-width: 750px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 18px;
+            }
+
+            .hero {
+                padding: 70px 6%;
+            }
+
+            .hero h1 {
+                font-size: 65px;
+                letter-spacing: -4px;
+            }
+
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about h2 {
+                font-size: 40px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">PERSPECTIVE SHIFT</div>
+
+    <nav>
+        <a href="#latest">Latest</a>
+        <a href="#about">About</a>
+    </nav>
+</header>
+
+
+<section class="hero">
+
+    <small>A blog about change, ideas & perspectives</small>
+
+    <h1>THINK<br>DIFFERENTLY.</h1>
+
+    <p>
+        Perspective Shift explores the ideas, questions and changes
+        shaping the world around us.
+    </p>
+
+    <a class="button" href="#latest">Explore the latest →</a>
+
+</section>
+
+
+<section class="articles" id="latest">
+
+    <h2>Latest thinking.</h2>
+
+    <div class="article-grid">
+
+        <article class="article">
+            <span>01 — Change</span>
+            <h3>Why Change Has to Come</h3>
+            <p>
+                Sometimes the world cannot remain the way it is.
+                But what makes change necessary?
+            </p>
+        </article>
+
+        <article class="article">
+            <span>02 — Society</span>
+            <h3>Why We Resist Different Ideas</h3>
+            <p>
+                We all see the world through our own experiences.
+                What happens when we challenge those perspectives?
+            </p>
+        </article>
+
+        <article class="article">
+            <span>03 — Future</span>
+            <h3>What Comes Next?</h3>
+            <p>
+                The future is shaped by the decisions we make today.
+                The question is what kind of future we want.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="about" id="about">
+
+    <h2>Change starts with perspective.</h2>
+
+    <p>
+        Perspective Shift is a space for questioning assumptions,
+        exploring different viewpoints and thinking about the
+        changes that could shape tomorrow.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <div>© 2026 Perspective Shift</div>
+
+    <div>Question. Challenge. Change.</div>
+
+</footer>
+
+</body>
+</html>
 
